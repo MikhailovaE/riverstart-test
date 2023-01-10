@@ -1,0 +1,30 @@
+//
+label.input_label {
+    top: 0;
+    font-size: 14px;
+    color: $color-secondary-gray;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    -webkit-transition: top .2s, font-size .2s, color .2s;
+    transition: top .2s, font-size .2s, color .2s;
+}
+
+input.input:not(:focus):hover,
+textarea.input:not(:focus):hover {
+    border-color: $color-secondary-gray;
+}
+
+input.input:active,
+input.input:focus,
+textarea.input:active,
+textarea.input:focus {
+    color: $color-base;
+    border-color: $color-secondary;
+}
+
+textarea.input {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    height: 99px;
+}

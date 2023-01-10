@@ -1,0 +1,203 @@
+extends _includes/layout
+
+block config
+    - var pagetitle = 'Index'
+    //- использовать в крайнем случае
+    //- var bodyClass = ''
+
+block content
+    .container
+        .discuss__wrapper 
+            .discuss__content
+                .discuss__title Обсудить проект
+                .discuss__subtitle Расскажите о проекте в форме или свяжитесь с нами напрямую
+                .discuss__contacts 
+                    .discuss__contacts-item 
+                        a(href="mailto:hello@riverstart.ru").link hello@riverstart.ru
+                        p Написать нам на почту
+                    .discuss__contacts-item 
+                        a(href="https://t.me/ekhohrin").link
+                            img(src="assets/img/photo.png").profile-photo 
+                            span.link @ekhohrin
+                        p Написать нашему аккаунт-директору в Telegram
+            .discuss__form 
+                form.contact__form
+                    fieldset 
+                        label.label Что вас интересует?
+                        .checkboxes 
+                            .checkbox._category
+                                input(id="category_1" name="category" value="Сайт" type="checkbox")
+                                label(for="category_1") Сайт
+                            .checkbox._category
+                                input(id="category_2" name="category" value="Веб-сервис" type="checkbox")
+                                label(for="category_2") Веб-сервис
+                            .checkbox._category
+                                input(id="category_3" name="category" value="Маркетинг" type="checkbox")
+                                label(for="category_3") Маркетинг
+                            .checkbox._category
+                                input(id="category_4" name="category" value="Приложение" type="checkbox")
+                                label(for="category_4") Приложение
+                            .checkbox._category
+                                input(id="category_5" name="category" value="Брендинг" type="checkbox")
+                                label(for="category_5") Брендинг
+                            .checkbox._category
+                                input(id="category_6" name="category" value="Что-то ещё" type="checkbox")
+                                label(for="category_6") Что-то ещё
+                    .form__group
+                        input.input(name="name")
+                        label.input_label Имя
+                    .form__row 
+                        .form__group
+                            input.input(name="phone" inputmode="text")
+                            label.input_label Телефон
+                        .form__group
+                            input.input(name="email" inputmode="email")
+                            label.input_label Почта
+                    .form__group
+                        textarea.input(name="description")
+                        label.input_label Опишите задачу своими словами
+                    fieldset.cost
+                        label.label Бюджет (₽):
+                        .checkboxes.radio
+                            .checkbox 
+                                input(id="budget_1" name="budget" value="до 500к" type="radio")
+                                label(for="budget_1") до 500к
+                            .checkbox 
+                                input(id="budget_2" name="budget" value="до 1 млн" type="radio")
+                                label(for="budget_2") до 1 млн
+                            .checkbox 
+                                input(id="budget_3" name="budget" value=" > 1 млн" type="radio")
+                                label(for="budget_3") &gt; 1 млн
+                    .attach 
+                        .attach__file
+                            img(src="assets/img/attach.png")
+                            label(for="file") Прикрепить бриф
+                                input(name="file" type="file")
+                        .attach__docs
+                            img(src="assets/img/docs.png")
+                            a(href="javascript:;") Наш бриф в Google Docs
+                    button.btn Оставить заявку
+            .discuss__adress
+                .discuss__adress-internal
+                    .office 
+                        .office__title Московский офис
+                        .office__adress Новая пл., 6
+                        .office__phone 8 (499) 112-46-21
+                    .office 
+                        .office__title Нижегородский офис
+                        .office__adress ул. Рождественская, 26
+                        .office__phone 8 (831) 2-889-354
+                .discuss__adress-foreign
+                    .office 
+                        .office__title Таллинский офис
+                        .office__adress 3 korrus, Metro Plaza, Viru väljak 2
+                        .office__phone +372 610-42-53
+                        .office__company 
+                            .office__company-link
+                                p Oceanstart LLC
+                                p Worldwide outsourcing and outstaffing
+                                a(href="javascript;:").link oceanstart.dev <i class="icon-link-ext"></i>
+                            .office__company-logo
+                                img(src="assets/img/logo.png")
+
+    //- .container
+    //-     .block
+    //-         ul.demo-menu
+    //-             li
+    //-                 a(href="other-page.html") Other Page
+    //-             li
+    //-                 span.link.js-scrollto(data-target="#scroll") Scroll
+    //-             li
+    //-                 a(href="popup.html" data-fancybox data-type="ajax") Fancy Ajax Popup
+    //-     .block._mb-none.demo-block
+    //-         pre .block._mb-none
+    //-     .block.demo-block
+    //-         pre .block
+    //-     .block 
+    //-         span.text-muted .text-muted
+    //-         | 
+    //-         span.text-nowrap .text-nowrap
+    //-         | 
+    //-         span.text-uppercase .text-uppercase
+    //-         | 
+    //-         span.color-primary .color-primary
+    //-         | 
+    //-         span.color-secondary .color-secondary
+    //-         | 
+    //-         a(href="#") a
+    //-         | 
+    //-         span.link .link
+    //-         | 
+    //-         br
+    //-         span.demo-font font-family-alt
+    //-     .block
+    //-         pre i.icon-{name}
+    //-         span(style="font-size:2rem")
+    //-             i.icon-facebook 
+    //-             i.icon-twitter 
+    //-             i.icon-instagram 
+    //-             i.icon-vk 
+    //-     .block.demo-flex
+    //-         button.btn .btn 
+    //-         button.btn(disabled) .btn(disabled)
+    //-         button.btn._primary .btn._primary
+    //-         button.btn._primary(disabled) .btn._primary(disabled)
+    //-         button.btn._secondary .btn._secondary
+    //-         button.btn._secondary(disabled) .btn._secondary(disabled)
+    //-     .block
+    //-         .input.js-label
+    //-             input
+    //-             label .input.js-label input
+    //-         .input._error.js-label
+    //-             input(required)
+    //-             label .input._error.js-label input(required)
+    //-         .input.js-label
+    //-             input(disabled)
+    //-             label .input.js-label input(disabled)
+    //-         .input.js-label
+    //-             input(type="tel").js-mask
+    //-             label .input.js-label input.js-mask(type="tel")
+    //-     .block
+    //-         pre .bk
+    //-         p.bk
+    //-             span.bk__item
+    //-                 a(href="#") span.bk__item a(href="#")
+    //-             span.bk__item
+    //-                 a(href="#") span.bk__item a(href="#")
+    //-             span.bk__item span.bk__item
+    //-     .block
+    //-         pre +svgsprite("{name}")
+    //-         +svgsprite("wikipedia")
+    //-         +svgsprite("track")
+    //-     .block
+    //-         pre +pngsprite("{name}")
+    //-         +pngsprite("insta-raz")
+    //-         +pngsprite("insta-dva")
+    //-     #scroll.block
+    //-         pre div.rte
+    //-         .rte
+    //-             h3 Title H3
+    //-             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas iaculis nisl, in fermentum urna scelerisque nec. Mauris enim erat, bibendum sed condimentum at, ultrices non arcu. Morbi eu sem porttitor, vulputate justo ut, fringilla turpis. Donec in elementum nunc. Cras maximus faucibus dictum. Duis sodales lacus ut eros sollicitudin tristique. Duis vitae tincidunt sem, eget ullamcorper turpis. Maecenas tristique eget leo sed sodales.
+    //-             ul
+    //-                 li One
+    //-                 li Two
+    //-                 li Three
+    //-                 li Four
+    //-             p Vivamus risus erat, dictum vel facilisis non, consectetur id eros. Mauris pretium libero libero, quis malesuada ante eleifend nec. Vivamus massa lorem, tempus non nibh in, egestas facilisis augue. Vestibulum eleifend erat ante, et interdum lacus posuere sodales. Nam elementum dignissim nisi et pretium. Nunc tristique ipsum purus, ut rutrum leo vestibulum a. Praesent fringilla arcu orci, at faucibus ante convallis a.
+    //-             p 
+    //-                 img(src="assets/img/lena.jpg" alt="")
+    //-                 img(src="assets/img/transparency.png" alt="")
+    //-                 img(src="assets/img/logo.svg" alt="")
+    //-             ol
+    //-                 li One
+    //-                 li Two
+    //-                 li Three
+    //-                 li Four
+    //-             p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
+    //-             p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
+    //-             p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
+    //-             p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
+    //-     .block
+    //-         pre img.lazyload(data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="")
+    //-         img.lazyload(data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="")
+

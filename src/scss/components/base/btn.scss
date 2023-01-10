@@ -1,0 +1,21 @@
+// button
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 24px 80px;
+    text-align: center;
+    color: $color-primary-gray;
+    border-radius: 12px;
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+
+    @media (min-width: 1650px) {
+        padding: 30px 110px;
+        border-radius: 16px;
+    }
+
+    &:hover {
+        background-color: $color-secondary-hover;
+        border-color: $color-secondary-hover;
+    }
+}

@@ -1,0 +1,383 @@
+@media (min-width: 1280px) {
+    .discuss__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "content form"
+            "adress form";
+    }
+}
+
+.discuss__content {
+    grid-area: content;
+    padding: 40px 30px;
+    color: $color-primary-gray;
+
+    @media (min-width: 768px) {
+        padding: 50px 40px;
+    }
+
+    @media (min-width: 1280px) {
+        padding: 70px 80px 0 0;
+    }
+
+    @media (min-width: 1650px) {
+        padding: 120px 120px 0 0;
+    }
+}
+
+.discuss__title {
+    font-size: 38px;
+    line-height: 120%;
+    letter-spacing: -.02em;
+    margin-bottom: 16px;
+    color: $color-white;
+
+    @media (min-width: 768px) {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: 1280px) {
+        font-size: 56px;
+        margin-bottom: 35px;
+    }
+
+    @media (min-width: 1650px) {
+        font-size: 85px;
+        margin-bottom: 50px;
+    }
+}
+
+.discuss__subtitle {
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-white;
+
+    @media (min-width: 1280px) {
+        font-size: 18px;
+        max-width: 330px;
+    }
+
+    @media (min-width: 1650px) {
+        font-size: 26px;
+        max-width: 490px;
+    }
+}
+
+.discuss__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    @media (min-width: 1280px) {
+        flex-direction: column;
+        margin-top: 170px;
+    }
+}
+
+.discuss__contacts-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.discuss__contacts-item+.discuss__contacts-item {
+    margin-top: 25px;
+
+    @media (min-width: 768px) {
+        margin-top: 0;
+        margin-left: 110px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    @media (min-width: 1650px) {
+        margin-top: 70px;
+    }
+}
+
+.discuss__contacts-item p {
+    opacity: .6;
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.link {
+    cursor: pointer;
+    color: $color-primary-gray;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+.discuss__contacts-item .link {
+    color: $color-primary-gray;
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: -.03em;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 1280px) {
+        font-size: 28px;
+    }
+
+    @media (min-width: 1650px) {
+        font-size: 42px;
+    }
+}
+
+.discuss__contacts-item .link .profile-photo {
+    flex: 0 0 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: $color-gray;
+
+    @media (min-width: 1280px) {
+        flex: 0 0 56px;
+        height: 56px;
+    }
+}
+
+.discuss__form {
+    grid-area: form;
+    background-color: $color-primary-gray;
+    padding: 30px 30px 65px;
+    margin: 0 -25px;
+
+    @media (min-width: 768px) {
+        padding: 50px 40px 85px;
+        margin: 0 -50px;
+    }
+
+    @media (min-width: 1280px) {
+        padding: 75px 65px 0 80px;
+
+        &::before {
+            content: '';
+            width: 1000%;
+            background: $color-bg-white;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    @media (min-width: 1650px) {
+        padding: 120px 0 80px 120px;
+    }
+}
+
+.attach {
+    color: $color-base;
+    display: flex;
+    margin: 35px 0;
+    align-items: center;
+    gap: 30px;
+
+    input[name=file] {
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    label {
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .attach__docs,
+    .attach__file {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 8px;
+        }
+    }
+
+    .attach__docs {
+        display: none;
+
+        @media (min-width: 1650px) {
+            display: flex;
+
+        }
+    }
+}
+
+// adress
+.discuss__adress {
+    grid-area: adress;
+    padding: 50px 0 0;
+
+    @media (min-width: 768px) {
+        padding: 50px 0 0;
+    }
+
+    @media (min-width: 1280px) {
+        padding: 0;
+        margin-top: 130px;
+    }
+
+    @media (min-width: 1650px) {
+        padding: 0;
+        margin-top: 195px;
+    }
+}
+
+.discuss__adress-internal {
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: 768px) {
+        padding: 0 40px;
+    }
+
+    @media (min-width: 1280px) {
+        padding: 0;
+    }
+}
+
+.office {
+    color: $color-primary-gray;
+    flex: 0 1 48%;
+
+    @media (min-width: 768px) {
+        flex: none;
+        max-width: 50%;
+        width: auto;
+        padding: 0;
+        margin-right: 125px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-right: 80px;
+    }
+
+    @media (min-width: 1650px) {
+        margin-right: 125px;
+    }
+}
+
+.office__title {
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: .01em;
+    color: $color-white;
+
+    @media (min-width: 1280px) {
+        font-size: 18px;
+    }
+}
+
+.office__adress,
+.office__phone {
+    color: $color-primary-gray;
+    opacity: .5;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 120%;
+
+    @media (min-width: 1650px) {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+}
+
+
+.discuss__adress-foreign .office {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 40px;
+    background: rgba(247, 247, 250, .05);
+    padding: 20px 30px;
+
+    @media (min-width: 768px) {
+        border-radius: 16px;
+    }
+
+    @media (min-width: 1280px) {
+        padding: 20px 25px;
+        max-width: 410px;
+    }
+
+    @media (min-width: 1650px) {
+        padding: 35px 40px;
+        max-width: 610px;
+    }
+
+    .office__company {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        @media (min-width: 1650px) {
+            margin-top: 70px;
+        }
+    }
+}
+
+.office__company-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+        color: $color-primary-gray;
+        opacity: .5;
+        font-size: 12px;
+        line-height: 120%;
+
+        @media (min-width: 1650px) {
+            font-size: 18px;
+        }
+    }
+
+    .link {
+        color: $color-primary-gray;
+        font-size: 15px;
+        margin-top: 20px;
+
+        @media (min-width: 1650px) {
+            font-size: 23px;
+            margin-top: 30px;
+        }
+    }
+}
+
+.office__company-logo {
+    flex: 0 0 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    img {
+        width: 60px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-left: 130px;
+    }
+
+    @media (min-width: 1650px) {
+        flex: 0 0 90px;
+        height: 90px;
+
+        img {
+            width: 90px;
+        }
+    }
+}

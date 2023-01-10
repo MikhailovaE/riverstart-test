@@ -1,0 +1,156 @@
+// form
+
+.contact__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1280px) {
+        max-width: 650px;
+    }
+
+
+    label.label {
+        font-size: 15px;
+        line-height: 160%;
+        letter-spacing: .01em;
+        color: $color-secondary-gray;
+        cursor: pointer;
+
+        @media (min-width: 1650px) {
+            font-size: 22px;
+        }
+    }
+
+    .cost {
+        margin-top: 40px;
+    }
+
+    .checkboxes {
+        overflow-x: auto;
+        display: flex;
+        margin-top: 15px;
+        color: $color-base;
+        margin-bottom: 40px;
+        gap: 13px;
+
+        @media (min-width: 1280px) {
+            overflow: inherit;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: 1650px) {
+            margin-top: 24px;
+        }
+
+        .checkbox {
+            flex: 0 0 auto;
+
+            input {
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+            }
+
+            label {
+                font-size: 14px;
+                line-height: 150%;
+                display: block;
+                text-align: center;
+                cursor: pointer;
+                transition: background-color .2s, color .2s;
+
+                @media (min-width: 1650px) {
+                    font-size: 20px;
+                }
+
+                &:hover {
+                    background-color: rgba(129.0, 129.0, 139.0, 0.1);
+                }
+            }
+
+            input:checked~label {
+                background: $color-secondary;
+                color: $color-white;
+            }
+        }
+    }
+
+    .checkboxes .checkbox._category label {
+        padding: 11px 30px;
+        border: 2px solid $color-gray;
+        border-radius: 12px;
+
+        @media (min-width: 1650px) {
+            padding: 18px 45px;
+        }
+    }
+
+    .checkboxes.radio {
+        border-radius: 16px;
+        border: 2px solid $color-gray;
+        overflow: hidden;
+        gap: 0;
+        display: flex;
+
+        .checkbox {
+            flex: 1 1 33.33%;
+
+            label {
+                padding: 11px 0;
+
+                @media (min-width: 1650px) {
+                    padding: 18px 0;
+                }
+            }
+        }
+    }
+
+    .form__row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-top: 25px;
+
+        @media (min-width: 768px) {
+            gap: 30px;
+        }
+
+        @media (min-width: 1280px) {
+            gap: 17px;
+        }
+
+        @media (min-width: 1650px) {
+            margin-top: 70px;
+            gap: 25px;
+        }
+
+        .form__group {
+            flex: 0 0 100%;
+            margin-bottom: 40px;
+
+            @media (min-width: 768px) {
+                flex: 1 1 45%;
+                max-width: 50%;
+            }
+        }
+    }
+
+    input.input,
+    textarea.input {
+        width: 100%;
+        padding: 23px 0 10px;
+        line-height: 160%;
+        color: $color-secondary-gray;
+        font-size: 15px;
+        border-bottom: 2px solid $color-gray;
+        cursor: pointer;
+        -webkit-transition: border-bottom-color .2s;
+        transition: border-bottom-color .2s;
+    }
+}

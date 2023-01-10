@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Index :: Frontend pack</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="assets/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Index">
+    <meta property="twitter:title" content="Index">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  </head>
+  <body class="body">
+    <div class="content">
+      <div class="container">
+        <div class="discuss__wrapper"> 
+          <div class="discuss__content">
+            <div class="discuss__title">Обсудить проект</div>
+            <div class="discuss__subtitle">Расскажите о проекте в форме или свяжитесь с нами напрямую</div>
+            <div class="discuss__contacts"> 
+              <div class="discuss__contacts-item"> <a class="link" href="mailto:hello@riverstart.ru">hello@riverstart.ru</a>
+                <p>Написать нам на почту</p>
+              </div>
+              <div class="discuss__contacts-item"> <a class="link" href="https://t.me/ekhohrin"><img class="profile-photo" src="assets/img/photo.png"><span class="link">@ekhohrin</span></a>
+                <p>Написать нашему аккаунт-директору в Telegram</p>
+              </div>
+            </div>
+          </div>
+          <div class="discuss__form"> 
+            <form class="contact__form">
+              <fieldset> 
+                <label class="label">Что вас интересует?</label>
+                <div class="checkboxes"> 
+                  <div class="checkbox _category">
+                    <input id="category_1" name="category" value="Сайт" type="checkbox">
+                    <label for="category_1">Сайт</label>
+                  </div>
+                  <div class="checkbox _category">
+                    <input id="category_2" name="category" value="Веб-сервис" type="checkbox">
+                    <label for="category_2">Веб-сервис</label>
+                  </div>
+                  <div class="checkbox _category">
+                    <input id="category_3" name="category" value="Маркетинг" type="checkbox">
+                    <label for="category_3">Маркетинг</label>
+                  </div>
+                  <div class="checkbox _category">
+                    <input id="category_4" name="category" value="Приложение" type="checkbox">
+                    <label for="category_4">Приложение</label>
+                  </div>
+                  <div class="checkbox _category">
+                    <input id="category_5" name="category" value="Брендинг" type="checkbox">
+                    <label for="category_5">Брендинг</label>
+                  </div>
+                  <div class="checkbox _category">
+                    <input id="category_6" name="category" value="Что-то ещё" type="checkbox">
+                    <label for="category_6">Что-то ещё</label>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form__group">
+                <input class="input" name="name">
+                <label class="input_label">Имя</label>
+              </div>
+              <div class="form__row"> 
+                <div class="form__group">
+                  <input class="input" name="phone" inputmode="text">
+                  <label class="input_label">Телефон</label>
+                </div>
+                <div class="form__group">
+                  <input class="input" name="email" inputmode="email">
+                  <label class="input_label">Почта</label>
+                </div>
+              </div>
+              <div class="form__group">
+                <textarea class="input" name="description"></textarea>
+                <label class="input_label">Опишите задачу своими словами</label>
+              </div>
+              <fieldset class="cost">
+                <label class="label">Бюджет (₽):</label>
+                <div class="checkboxes radio">
+                  <div class="checkbox"> 
+                    <input id="budget_1" name="budget" value="до 500к" type="radio">
+                    <label for="budget_1">до 500к</label>
+                  </div>
+                  <div class="checkbox"> 
+                    <input id="budget_2" name="budget" value="до 1 млн" type="radio">
+                    <label for="budget_2">до 1 млн</label>
+                  </div>
+                  <div class="checkbox"> 
+                    <input id="budget_3" name="budget" value=" &gt; 1 млн" type="radio">
+                    <label for="budget_3">&gt; 1 млн</label>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="attach"> 
+                <div class="attach__file"><img src="assets/img/attach.png">
+                  <label for="file">Прикрепить бриф
+                    <input name="file" type="file">
+                  </label>
+                </div>
+                <div class="attach__docs"><img src="assets/img/docs.png"><a href="javascript:;">Наш бриф в Google Docs</a></div>
+              </div>
+              <button class="btn">Оставить заявку</button>
+            </form>
+          </div>
+          <div class="discuss__adress">
+            <div class="discuss__adress-internal">
+              <div class="office"> 
+                <div class="office__title">Московский офис</div>
+                <div class="office__adress">Новая пл., 6</div>
+                <div class="office__phone">8 (499) 112-46-21</div>
+              </div>
+              <div class="office"> 
+                <div class="office__title">Нижегородский офис</div>
+                <div class="office__adress">ул. Рождественская, 26</div>
+                <div class="office__phone">8 (831) 2-889-354</div>
+              </div>
+            </div>
+            <div class="discuss__adress-foreign">
+              <div class="office"> 
+                <div class="office__title">Таллинский офис</div>
+                <div class="office__adress">3 korrus, Metro Plaza, Viru väljak 2</div>
+                <div class="office__phone">+372 610-42-53</div>
+                <div class="office__company"> 
+                  <div class="office__company-link">
+                    <p>Oceanstart LLC</p>
+                    <p>Worldwide outsourcing and outstaffing</p><a class="link" href="javascript;:">oceanstart.dev <i class="icon-link-ext"></i></a>
+                  </div>
+                  <div class="office__company-logo"><img src="assets/img/logo.png"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <link rel="stylesheet" href="assets/css/common.css?v=2.0.0">
+    <script>
+      /* изменяемые настройки скриптов, указаны значения по умолчанию */
+      var appConfig = {
+          /*
+          scrollToOffset: 100, // оффсет при скролле до элемента
+          popupLoadedEvent: 'app.popup_loaded' // событие загрузки модалки
+          */
+      }
+    </script>
+    <script src="assets/js/vendors.bundle.js"></script>
+    <script src="assets/js/main.bundle.js?v=2.0.0"></script>
+  </body>
+</html>

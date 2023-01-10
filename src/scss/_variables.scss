@@ -1,0 +1,64 @@
+/* Main Colors */
+$color-base: #1F2032;
+$color-white: #fff;
+$color-primary-gray: #F7F7FA;
+$color-secondary-gray:#9a9aad;
+$color-gray: #e0e0e4;
+$color-primary: #E20210;
+$color-secondary: #312dff;
+$color-secondary-hover: #2926D8;
+
+$color-bg: #1F2032;
+$color-bg-white: #eeeff4;
+$color-text: $color-white;
+$color-error: $color-primary;
+$color-popup-background: $color-white;
+
+$color-overlay: $color-base;
+$opacity-overlay: .4;
+
+$link-color: $color-text;
+$link-hover-color: $color-primary;
+
+$transition-duration: .2s;
+$transition-timing-function: ease-in-out;
+
+$header-z-index: 1000;
+$header-height: (sm: 2rem,
+    md: 3rem,
+    lg: 4rem,
+    xl: 5rem,
+);
+// $header-height-fixed: ;
+
+/* Fonts */
+$font-family: 'Maven Pro',
+sans-serif;
+$font-family-alt: serif;
+$font-family-icon: "iconfont";
+$font-family-fontello: "fontello";
+$font-size: 1rem;
+$font-weight: normal;
+$letter-spacing: normal;
+$line-height: 1.2;
+
+/* Screen sizes */
+$grid-breakpoints: (sm: 360px,
+    md: 768px,
+    lg: 1280px,
+    xl: 1920px);
+$container-max-widths: (sm: 100%,
+    md: 100%,
+    lg: 1170px,
+    xl: 1170px);
+$container-paddings: (sm: 25px,
+    md: 50px,
+    lg: 0,
+    xl: 0);
+
+/* block margins */
+$block-margins: (sm: 1rem,
+    md: 2rem,
+    lg: 3rem,
+    xl: 4rem,
+);
